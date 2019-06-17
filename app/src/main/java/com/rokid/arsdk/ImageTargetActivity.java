@@ -91,7 +91,7 @@ public class ImageTargetActivity extends BaseActivity implements SampleApplicati
     // Alert Dialog used to display SDK errors
     private AlertDialog mErrorDialog;
 
-    private boolean mIsDroidDevice = false;
+//    private boolean mIsDroidDevice = false;
 
 
     @Override
@@ -105,7 +105,7 @@ public class ImageTargetActivity extends BaseActivity implements SampleApplicati
         mDatasetStrings.add("Tarmac.xml");
 
         vuforiaAppSession
-                .initAR(this, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                .initAR(this, ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         mGestureDetector = new GestureDetector(getApplicationContext(), new GestureListener(this));
 
@@ -113,7 +113,7 @@ public class ImageTargetActivity extends BaseActivity implements SampleApplicati
         mTextures = new Vector<>();
         loadTextures();
 
-        mIsDroidDevice = android.os.Build.MODEL.toLowerCase().startsWith("droid");
+//        mIsDroidDevice = android.os.Build.MODEL.toLowerCase().startsWith("droid");
 
         // Relocalization timer and message
         mSampleAppMessage = new SampleAppMessage(this, mUILayout, mUILayout.findViewById(R.id.topbar_layout), false);
@@ -182,11 +182,11 @@ public class ImageTargetActivity extends BaseActivity implements SampleApplicati
         showProgressIndicator(true);
 
         // This is needed for some Droid devices to force portrait
-        if (mIsDroidDevice)
-        {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
+//        if (mIsDroidDevice)
+//        {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        }
 
         vuforiaAppSession.onResume();
     }

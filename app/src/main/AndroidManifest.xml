@@ -21,7 +21,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ImageTargetActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:noHistory="true"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize">
             <intent-filter>

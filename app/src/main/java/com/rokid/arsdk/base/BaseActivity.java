@@ -1,5 +1,6 @@
 package com.rokid.arsdk.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.hardware.display.DisplayManager;
 import android.os.Build;
@@ -10,7 +11,7 @@ import android.view.WindowManager;
 
 import com.rokid.arsdk.utils.Logger;
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends Activity {
 
     private DisplayManager.DisplayListener mDisplayListener;
     private DisplayManager mDisplayManager;
