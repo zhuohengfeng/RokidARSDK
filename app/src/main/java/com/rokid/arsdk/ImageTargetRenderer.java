@@ -57,7 +57,7 @@ public class ImageTargetRenderer extends BaseRenderer implements SampleAppRender
     private boolean mModelIsLoaded = false;
     private boolean mIsTargetCurrentlyTracked = false;
 
-    private static final float OBJECT_SCALE_FLOAT = 0.003f;
+    private static final float OBJECT_SCALE_FLOAT = 3f;
 
     ImageTargetRenderer(ImageTargetActivity activity, SampleApplicationSession session)
     {
@@ -67,7 +67,7 @@ public class ImageTargetRenderer extends BaseRenderer implements SampleAppRender
         // SampleAppRenderer used to encapsulate the use of RenderingPrimitives setting
         // the device mode AR/VR and stereo mode
         mSampleAppRenderer = new SampleAppRenderer(this, mActivityRef.get(), Device.MODE.MODE_AR, vuforiaAppSession.getVideoMode(),
-                false, 0.01f , 5f);
+                false, 2.0f , 2500f);
     }
 
 
